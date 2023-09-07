@@ -1,3 +1,17 @@
+# Övnings beskrivning:
+# Skriv ett Python-program som spelar sten-sax-påse med användaren.
+# Programmet ska läsa in användarens val och sedan slumpa fram sitt val av de tre orden.
+# Sedan ska programmets val och användarens val jämföras enligt spelets regler (kolla dem på
+# webben om du inte känner till dem) och den som vinner får en poäng.
+# Detta ska fortsätta tills användaren matar in ”sluta” som sitt val.
+# Då ska ställningen mellan programmet och användaren skrivas ut.
+# I modulen random som introducerades i uppgift 2 finns en funktion choice() som kan ta
+# en lista som argument och returnerar ett slumpmässigt element från den listan. Den kan t.ex.
+# anropas så här:
+# val = random.choice(["sten","sax","påse"])
+# varpå variabeln val kommer att innehålla ett av dessa ord, slumpmässigt valt.
+
+
 import random
 
 #Uppstart
