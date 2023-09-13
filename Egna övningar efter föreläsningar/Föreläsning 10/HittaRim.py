@@ -14,6 +14,11 @@ try:
     
     #Loopa igenom varje rad och lägg till i ordlistan
     for line in file:
+        line = line.strip()             #Ta bort så att det inte blir en ny rad
         ordLista.append(line)
 except FileNotFoundError:
     print("Hittade inte filen!")
+
+#test
+for ord in ordLista:
+    print(ord)
