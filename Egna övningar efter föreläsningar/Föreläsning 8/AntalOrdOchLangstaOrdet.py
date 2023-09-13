@@ -11,7 +11,7 @@ ordLista = anvandresInput.split()
 langstaOrdet = 0
 langstaOrdetPos = 0
 
-#printa listan
+#loopa igenom listan
 for ord in ordLista:
     print(ord)
 
