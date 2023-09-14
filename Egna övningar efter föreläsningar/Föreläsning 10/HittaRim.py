@@ -20,5 +20,5 @@ except FileNotFoundError:
     print("Hittade inte filen!")
 
 #test
-for ord in ordLista:
-    print(ord)
+for ord in range(10):
+    print(ordLista[ord])
