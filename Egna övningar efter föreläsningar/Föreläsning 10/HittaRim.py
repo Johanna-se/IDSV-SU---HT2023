@@ -5,20 +5,19 @@
 # Om filen svenskaOrd.txt inte kan öppnas (t.ex. inte finns i aktuell mapp) ska ett
 # vänligt felmeddelande ges (undantaget heter då FileNotFoundError).
 
-#Skapa en lista att förvara orden i 
-ordLista = []
 
 #Försök öppna filen
 try:
+    #hårdkodad vilken fil som ska öppnas
     file = open("svenskaOrd.txt", "r")
-    
-    #Loopa igenom varje rad och lägg till i ordlistan
-    for line in file:
-        line = line.strip()             #Ta bort så att det inte blir en ny rad
-        ordLista.append(line)
+
+    #Läs in filen och stäng den sedan
+    ordLista = file.readlines()
+    file.close()
+
+    #Loopa igenom varje element 
+    for pos in range(len(ordLista)):
+        ordLista[pos] = ordLista[pos].strip()               #Ta bort new line tecken
 except FileNotFoundError:
     print("Hittade inte filen!")
 
-#test
-for ord in range(10):
-    print(ordLista[ord])
