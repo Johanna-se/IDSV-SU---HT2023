@@ -24,3 +24,39 @@
 # Vikt: 83.2
 # Längd: 1.76
 # BMI = 26.859504132231407
+
+#Funktioner
+def InputMedMinMaxKoll(meddelande, min, max):
+    while True:
+        indata = float(input(meddelande))
+
+        if indata < min:
+            print("Det var för lite, prova igen.")
+        elif indata > max:
+            print("Det var för mycket, prova igen.")
+        else:
+            break
+    return indata
+
+#Min och max för längd och vikt
+minLangd = 1
+maxLangd = 2.5
+minVikt = 40
+maxVikt = 600
+
+#Be om läng och vikt från användaren
+Langd = InputMedMinMaxKoll("Vad är din längd (i meter)? ", minLangd, maxLangd)
+Vikt = InputMedMinMaxKoll("Vad är din vikt? ", minVikt, maxVikt)
+
+#Beräkna BMI
+BMI = Vikt/Langd**2
+
+#Kontrollera BMI mot tabell
+if BMI < 18.5:
+    print ("Ditt BMI är ", BMI, ". Du är underviktig")
+elif 18.5 <= BMI < 25:
+    print ("Ditt BMI är ", BMI, ". Du har normalvikt")
+elif 25 <= BMI < 29.9:
+    print ("Ditt BMI är ", BMI, ". Du är överviktig")
+else:
+    print ("Ditt BMI är ", BMI, ". Du har fetma")

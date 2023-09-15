@@ -18,6 +18,8 @@ try:
     #Loopa igenom varje element 
     for pos in range(len(ordLista)):
         ordLista[pos] = ordLista[pos].strip()               #Ta bort new line tecken
+
+    
 except FileNotFoundError:
     print("Hittade inte filen!")
 
