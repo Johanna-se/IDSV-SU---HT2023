@@ -25,7 +25,7 @@
 # Längd: 1.76
 # BMI = 26.859504132231407
 
-#Funktioner
+#Funktion
 def InputMedMinMaxKoll(meddelande, min, max):
     while True:
         indata = float(input(meddelande))
@@ -38,7 +38,7 @@ def InputMedMinMaxKoll(meddelande, min, max):
             break
     return indata
 
-#Min och max för längd och vikt
+#Konstaner för min / max för längd och vikt
 minLangd = 1
 maxLangd = 2.5
 minVikt = 40
